@@ -44,7 +44,7 @@ export default {
             message: item.displayName,
             img: item.Image,
             description: item.description,
-            link: "https://valorantwikibackend.herokuapp.com/uuid/" + item.uuid,
+            link: "https://valorantwiki.netlify.app/agents/" + item.uuid,
 
           });
         });
