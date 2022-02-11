@@ -44,7 +44,7 @@ export default {
             message: item.displayName,
             img: item.Image,
             description: item.description,
-            link: "https://valorantwiki.netlify.app/agents/" + item.uuid,
+            link: "https://valorantwiki.vercel.app/agents/" + item.uuid,
 
           });
         });
@@ -60,12 +60,7 @@ export default {
 
  <style <style scoped>
 
-    .card-img:hover{
-        opacity: 60%;
-    }
-    .text:hover{
-        opacity: 60%;
-    }
+   
  
     .text, .des{
         display: flex;
