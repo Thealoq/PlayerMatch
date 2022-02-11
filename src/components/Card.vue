@@ -60,12 +60,7 @@ export default {
 
  <style <style scoped>
 
-    .card-img:hover{
-        opacity: 60%;
-    }
-    .text:hover{
-        opacity: 60%;
-    }
+   
  
     .text, .des{
         display: flex;
