@@ -130,14 +130,14 @@ export default {
       this.error = null;
       try {
         const response = await fetch(
-          "http://localhost:2000/api/uuid/" + this.$route.params.uuid
+          "https://valorantwikibackend.herokuapp.com/api/uuid/" + this.$route.params.uuid
         );
         const json = await response.json();
         this.items.push({
           message: json.displayName,
           img: json.Image,
           description: json.description,
-          link: "http://localhost:8080/agents/" + json.uuid,
+          link: "https://valorantwikibackend.herokuapp.com/api/uuid/" + json.uuid,
           abilities: json.abilities
         });
       } catch (error) {
