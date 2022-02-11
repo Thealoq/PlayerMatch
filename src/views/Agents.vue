@@ -137,7 +137,6 @@ export default {
           message: json.displayName,
           img: json.Image,
           description: json.description,
-          link: "https://valorantwikibackend.herokuapp.com/api/uuid/" + json.uuid,
           abilities: json.abilities
         });
       } catch (error) {
