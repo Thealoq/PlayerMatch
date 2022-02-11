@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
-    <h1>Valorant Wiki</h1>
+   <a href="/">
+    <h1>Valorant Wiki</h1></a>
   </div>
 </template>
 
