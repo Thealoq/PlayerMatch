@@ -1,0 +1,2 @@
+/ /index.html 200
+/agents /index.html 200
