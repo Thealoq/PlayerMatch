@@ -44,7 +44,7 @@ export default {
             message: item.displayName,
             img: item.Image,
             description: item.description,
-            link: "valorantwiki.vercel.app/agents/" + item.uuid,
+            link: "https://valorantwiki.vercel.app/agents/" + item.uuid,
 
           });
         });
