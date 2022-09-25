@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Camp from "../assets/camp.png"
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
+import ValoSvg from "../assets/VALORANT.svg"
 export default function Home() {
 
     const [Maps, SetMaps] = useState([]);
@@ -98,6 +99,13 @@ export default function Home() {
                             )
                         })
                     }
+                    <div style={{  
+  backgroundImage: "url(" + {ValoSvg} + ")",
+  backgroundPosition: 'center',
+  backgroundSize: 'cover',
+  backgroundRepeat: 'no-repeat'
+}} className="logo-vga">
+                    </div>
                 </div>
             </div>
             <div className="home-maps">
