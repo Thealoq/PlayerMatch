@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Camp from "../assets/Camp.png"
+import Camp from "../assets/camp.png"
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 export default function Home() {
