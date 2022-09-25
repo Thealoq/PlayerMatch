@@ -1,4 +1,4 @@
-import "./layout.css"
+import "./Layout.css"
 import logo from "../assets/logo.png"
 import { useState, useEffect } from "react";
 import { GiHamburgerMenu } from 'react-icons/gi'
