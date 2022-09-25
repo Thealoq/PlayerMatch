@@ -1,0 +1,49 @@
+.agent-cards-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: 625px;
+    border: solid #9061F9;
+    border-radius: 12px;
+    margin: 2rem;
+    padding: 1rem 5rem;
+}
+
+.agent-cards-body img {
+    width: 600px;
+    height: auto;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.agent-home-title h3 {
+    font-size: 64px;
+    font-weight: bold;
+}
+
+.agent-home-title p {
+    color: #ad9393;
+}
+
+
+@media only screen and (max-width: 750px) {
+    .agent-cards-body {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .agent-home-title h3 {
+        font-size: 32px;
+        font-weight: bold;
+    }
+
+    .agent-cards-body img {
+        width: 400px;
+        height: auto;
+    }
+}
