@@ -19,6 +19,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .agent-home-title h3 {
@@ -46,4 +47,74 @@
         width: 400px;
         height: auto;
     }
+
+    #test{
+        width: 40vh;
+    }
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+}
+
+.splide__slide{
+    width: max-content;
+}
+
+#video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.splide__list {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    display: flex;
+    height: 100%;
+    margin: 0!important;
+    padding: 0!important;
+}
+
+.slider-card-css {
+    padding: 2rem;
+    background-color: #9061F9;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+
+.slider-card-css img {
+    width: 500px;
+}
+
+.home-gamemodes {
+    margin-top: 2rem;
+    width: 100%;
+    background-color: #9061F9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-gamemode{
+    border: solid white;
+    border-radius: 12px;
+    margin: 2rem;
+    padding: 1rem;
+    width: 250px;
+    height: 250px;
+}
+
+.allgamemode{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 60%;
 }
