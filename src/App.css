@@ -28,7 +28,7 @@
 }
 
 .agent-home-title p {
-    color: #ad9393;
+    color: #9a9a9a;
 }
 
 
@@ -145,10 +145,11 @@
     border-radius: 12px;
     margin: 2rem;
     padding: 1rem;
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
 }
 
 .home-ranks img {
-    width: 200px;
+    width: 150px;
 }
+

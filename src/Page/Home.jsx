@@ -70,7 +70,6 @@ export default function Home() {
                 </div>
             </div>
             <div className="center">
-                <h1>Agents</h1>
                 <Splide id="test" options={{ rewind: true, width: "160vh", perPage: 2, autoplay: true, type: 'loop', }} aria-label="React Splide Example">
                     {Content && Content.length > 0 ? Content.map((item, index) => (
                         <SplideSlide key={index}>
@@ -83,7 +82,6 @@ export default function Home() {
             </div>
             <div className="home-gamemodes center">
                 <div style={{ marginTop: "1rem" }}>
-                    <h1>GameMods</h1>
                 </div>
                 <div className="allgamemode">
                     {
@@ -111,15 +109,12 @@ export default function Home() {
                                 backgroundPosition: 'center',
                                 backgroundSize: 'cover',
                                 backgroundRepeat: 'no-repeat'
-                            }}>{item.displayName}</div>
+                            }}></div>
                         )
                     })
                 }
             </div>
             <div className="home-gamemodes center">
-                <div style={{ marginTop: "1rem", justifyContent: "flex-end" }}>
-                    <h1 style={{ justifyContent: "flex-end" }}>Ranks</h1>
-                </div>
                 <div className="allranks">
                     {
                         RankArray.map((item, index) => {

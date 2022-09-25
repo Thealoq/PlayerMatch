@@ -34,7 +34,9 @@ export default function Navbar() {
                 window.document.getElementById(item.path).style.transform = "scale(1.2)"
                 window.document.getElementById(item.path).style.backgroundColor = "#6746b1"
                 window.document.getElementById(item.path).style.borderRadius = " 4px"
-                window.document.getElementById(item.path).style.padding = "0.3rem"
+                window.document.getElementById(item.path).style.padding = "0.4rem"
+                window.document.getElementById(item.path).style.textAlign = "center"
+
             }
         })
     }, []);
