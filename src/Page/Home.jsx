@@ -71,11 +71,11 @@ export default function Home() {
                 </div>
             </div>
             <div className="center">
-                <Splide id="test" options={{ rewind: true, width: "160vh", perPage: 2, autoplay: true, type: 'loop', }} aria-label="React Splide Example">
+                <Splide id="test" options={{ rewind: true, width: "140vh", perPage: 2, autoplay: true, type: 'loop', }} aria-label="React Splide Example">
                     {Content && Content.length > 0 ? Content.map((item, index) => (
                         <SplideSlide key={index}>
                             <div className="slider-card-css">
-                                <img width={800} src={item.fullPortrait} alt="" />
+                                <img width={750} src={item.fullPortrait} alt="" />
                             </div>
                         </SplideSlide>
                     )) : <h3 style={{ color: "white" }}>Resimler bulunamadı.</h3>}
@@ -112,7 +112,7 @@ export default function Home() {
                 {
                     Maps.map((item, index) => {
                         return (
-                            <div className="hop center" style={{
+                            <div key={index} className="hop center" style={{
                                 backgroundImage: "url(" + item.splash + ")",
                                 backgroundPosition: 'center',
                                 backgroundSize: 'cover',
