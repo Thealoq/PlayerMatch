@@ -63,7 +63,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 70%;
+    flex-direction: column;
+    width: 50%;
     border: #9061F9 solid 3px;
     padding: 2rem 3rem;
     border-radius: 12px;
@@ -74,7 +75,6 @@
   }
 
   .footer-content {
-    width: 500px;
     color: #9a9a9a  ;
   }
 
@@ -110,7 +110,6 @@
 
     .footer {
         flex-direction: column;
-        height: 250px;
     }
 
     .footer-content {
