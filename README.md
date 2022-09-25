@@ -1,24 +1,2 @@
-# frontend
-
-## Project setup
-```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+  <img src="https://nilahgod.is-a-cool-femboy.xyz/5IybJTqcc.png"/> 
+  old ui visit old ui https://valorant-wiki-git-new-front-thealoqdev.vercel.app/
