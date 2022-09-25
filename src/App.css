@@ -96,7 +96,7 @@
 .home-gamemodes {
     margin-top: 2rem;
     width: 100%;
-    background-color: #9061F9;
+    background-color: #3a2665;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -117,4 +117,38 @@
     align-items: center;
     flex-wrap: wrap;
     width: 60%;
+}
+
+.home-maps {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+
+.hop {
+    width: 250px;
+    height: 500px;
+}
+
+.allranks{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 80%;
+}
+
+.home-ranks{
+    border: solid white;
+    border-radius: 12px;
+    margin: 2rem;
+    padding: 1rem;
+    width: 250px;
+    height: 250px;
+}
+
+.home-ranks img {
+    width: 200px;
 }

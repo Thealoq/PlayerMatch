@@ -4,10 +4,35 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 export default function Home() {
 
-    let splide = null;
-
+    const [Maps, SetMaps] = useState([]);
     const [Content, SetArray] = useState([]);
     const [GameMode, SetGameMode] = useState([]);
+    const RankArray = [
+        {
+            name: "PLATINUM",
+
+            largeIcon
+                :
+                "https://media.valorant-api.com/competitivetiers/564d8e28-c226-3180-6285-e48a390db8b1/17/largeicon.png"
+        },
+        {
+            name: "DIAMOND",
+
+            largeIcon
+                :
+                "https://media.valorant-api.com/competitivetiers/564d8e28-c226-3180-6285-e48a390db8b1/20/largeicon.png"
+        },
+        {
+            name: "IMMORTAL",
+            largeIcon
+                :
+                "https://media.valorant-api.com/competitivetiers/564d8e28-c226-3180-6285-e48a390db8b1/23/largeicon.png"
+        },
+        {
+            name: "RADIANT",
+            largeIcon: "https://media.valorant-api.com/competitivetiers/564d8e28-c226-3180-6285-e48a390db8b1/24/largeicon.png"
+        }
+    ]
     useEffect(() => {
         fetch("https://valorant-api.com/v1/agents")
             .then(response => response.json())
@@ -23,12 +48,14 @@ export default function Home() {
                 SetGameMode(json.data.filter(item => item.displayIcon))
             });
     }, []);
-    console.log(GameMode);
 
     useEffect(() => {
-        splide.props.options.perPage = 1;
-   
-    }, [splide])
+        fetch("https://valorant-api.com/v1/maps")
+            .then(response => response.json())
+            .then(json => {
+                SetMaps(json.data.filter(item => item.displayIcon))
+            });
+    }, []);
 
     return (
         <div className="center">
@@ -44,7 +71,7 @@ export default function Home() {
             </div>
             <div className="center">
                 <h1>Agents</h1>
-                <Splide  ref={(ref) => splide = ref} id="test" options={{ rewind: true, width: "160vh", perPage: 4, autoplay: true, type: 'loop', }} aria-label="React Splide Example">
+                <Splide id="test" options={{ rewind: true, width: "160vh", perPage: 2, autoplay: true, type: 'loop', }} aria-label="React Splide Example">
                     {Content && Content.length > 0 ? Content.map((item, index) => (
                         <SplideSlide key={index}>
                             <div className="slider-card-css">
@@ -55,28 +82,60 @@ export default function Home() {
                 </Splide>
             </div>
             <div className="home-gamemodes center">
-             <div style={{ marginTop: "1rem" }}>
-             <h1>GameMods</h1>
-             </div>
-              <div className="allgamemode">
+                <div style={{ marginTop: "1rem" }}>
+                    <h1>GameMods</h1>
+                </div>
+                <div className="allgamemode">
+                    {
+                        GameMode.map((item, index) => {
+                            return (
+                                <div key={index} className="home-gamemode center">
+                                    <div>
+                                        <img src={item.displayIcon} alt="" />
+                                    </div>
+                                    <div style={{ marginTop: "1rem" }}>
+                                        <span>{item.displayName}</span>
+                                    </div>
+                                </div>
+                            )
+                        })
+                    }
+                </div>
+            </div>
+            <div className="home-maps">
                 {
-                    GameMode.map((item,index) => {
-                        return(
-                            <div className="home-gamemode center">
-                               <div>
-                               <img src={item.displayIcon} alt="" />
-                                </div>
-                                <div style={{ marginTop: "1rem" }}>
-                                  <span>{item.displayName}</span>
-                                </div>
-                            </div>
+                    Maps.map((item, index) => {
+                        return (
+                            <div className="hop center" style={{
+                                backgroundImage: "url(" + item.splash + ")",
+                                backgroundPosition: 'center',
+                                backgroundSize: 'cover',
+                                backgroundRepeat: 'no-repeat'
+                            }}>{item.displayName}</div>
                         )
                     })
                 }
-              </div>
             </div>
-            <div className="">
-
+            <div className="home-gamemodes center">
+                <div style={{ marginTop: "1rem", justifyContent: "flex-end" }}>
+                    <h1 style={{ justifyContent: "flex-end" }}>Ranks</h1>
+                </div>
+                <div className="allranks">
+                    {
+                        RankArray.map((item, index) => {
+                            return (
+                                <div key={index} className="home-ranks center">
+                                    <div>
+                                        <img src={item.largeIcon} alt="" />
+                                    </div>
+                                    <div style={{ marginTop: "1rem" }}>
+                                        <span>{item.name}</span>
+                                    </div>
+                                </div>
+                            )
+                        })
+                    }
+                </div>
             </div>
         </div>
     )

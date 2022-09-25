@@ -1,5 +1,7 @@
 import Home from "./Page/Home"
 import Navbar from "./layout/Navbar"
+import Footer from "./layout/Footer"
+
 import {
   BrowserRouter as Router,
   Route,
@@ -14,6 +16,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   )
