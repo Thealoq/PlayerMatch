@@ -36,13 +36,12 @@ export default function Navbar() {
                 window.document.getElementById(item.path).style.borderRadius = " 4px"
                 window.document.getElementById(item.path).style.padding = "0.4rem"
                 window.document.getElementById(item.path).style.textAlign = "center"
-
             }
         })
     }, []);
     const variants = {
         open: { opacity: 1, x: 0 },
-        closed: { opacity: 0, x: "-100%" },
+        closed: { opacity: 0, y: "-100%" },
     }
     function OpenMenu() {
         if (Content == false) {

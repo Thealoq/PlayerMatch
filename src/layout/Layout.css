@@ -48,13 +48,14 @@
 
 
 .navbar-responsive-texts a {
-   border-top: solid white 1px;
+   border-bottom: solid white 1px;
    padding: 1rem 0.5rem;
-   width: 90%;
+   width: 70%;
 }
 
 .nav-resim {
     display: none;
+    z-index: 1;
 }
 
 
@@ -115,6 +116,11 @@
     .footer-content {
         width: 250px
        
+    }
+
+    .navbar-bg {
+      background-color: #9061F9;
+      z-index: 1;
     }
 
   

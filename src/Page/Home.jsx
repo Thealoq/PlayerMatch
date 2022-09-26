@@ -34,30 +34,28 @@ export default function Home() {
             largeIcon: "https://media.valorant-api.com/competitivetiers/564d8e28-c226-3180-6285-e48a390db8b1/24/largeicon.png"
         }
     ]
-    useEffect(() => {
+    function Fetch() {
         fetch("https://valorant-api.com/v1/agents")
             .then(response => response.json())
             .then(json => {
                 SetArray(json.data.filter(item => item.background))
             });
-    }, []);
 
-    useEffect(() => {
         fetch("https://valorant-api.com/v1/gamemodes")
             .then(response => response.json())
             .then(json => {
                 SetGameMode(json.data.filter(item => item.displayIcon))
             });
-    }, []);
 
-    useEffect(() => {
         fetch("https://valorant-api.com/v1/maps")
             .then(response => response.json())
             .then(json => {
                 SetMaps(json.data.filter(item => item.displayIcon))
             });
+    }
+    useEffect(() => {
+        Fetch()
     }, []);
-
     return (
         <div className="center">
             <div className="agent-cards-body">
@@ -99,12 +97,12 @@ export default function Home() {
                             )
                         })
                     }
-                    <div style={{  
-  backgroundImage: "url(" + {ValoSvg} + ")",
-  backgroundPosition: 'center',
-  backgroundSize: 'cover',
-  backgroundRepeat: 'no-repeat'
-}} className="logo-vga">
+                    <div style={{
+                        backgroundImage: "url(" + { ValoSvg } + ")",
+                        backgroundPosition: 'center',
+                        backgroundSize: 'cover',
+                        backgroundRepeat: 'no-repeat'
+                    }} className="logo-vga">
                     </div>
                 </div>
             </div>

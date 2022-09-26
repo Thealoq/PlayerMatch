@@ -153,5 +153,29 @@
     width: 150px;
 }
 
+.agent-cards-bodys {
+   margin-top: 2rem;
+   width: 80%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+}
 
+.agent-card-witdh {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 1rem;
+    width: 250px;
+    height: 350px;
+    background-color: #9061F9;
+    border-radius: 12px;
+}
 
+.agent-card-witdh img {
+    width: 280px;
+    height: auto;
+}
