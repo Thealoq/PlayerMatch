@@ -208,6 +208,7 @@
 }
 
 .Skills-card{
+    border-radius: 12px;
     border: solid #9061F9;
     display: flex;
     justify-content: space-between;
@@ -230,3 +231,40 @@
     width: 120px;
     height: auto;
 }
+
+.gs {
+    margin-left: 2rem;
+}
+@media only screen and (max-width: 750px) {
+   .agentcontent-cards-bodys {
+    flex-direction: column;
+   }
+
+   .agentcontent-content {
+    width: 30%;
+   }
+
+   .agentcontent-img img {
+    width: 400px;
+    margin-top: 6rem;
+    }
+    .agentcontent-content p {
+        width: 380px;
+        text-align: center;
+    }
+
+    .Skills-card{
+        flex-direction: column;
+    }
+    .bg-cardss img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .gs {
+        margin-left: 0rem;
+        width: 80%;
+    }
+    
+}
+

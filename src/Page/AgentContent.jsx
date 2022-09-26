@@ -41,7 +41,7 @@ export default function AgentContent() {
                                 <div className="center bg-cardss">
                                     <img src={item.displayIcon} alt={item.displayName} />
                                 </div>
-                                <div style={{ marginLeft:"2rem" }} > 
+                                <div className="center gs" > 
                                     <div><h3>{item.displayName}</h3></div>
                                     <div><p>{item.description}</p></div>
                                 </div>
