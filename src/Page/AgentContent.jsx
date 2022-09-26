@@ -15,11 +15,11 @@ export default function AgentContent() {
         <div className="center">
             <div className="agentcontent-cards-bodys">
                 <div style={{
-                backgroundImage: "url(" + Content.background + ")",
-                backgroundPosition: 'center',
-                backgroundSize: 'cover',
-                backgroundRepeat: 'no-repeat'
-            }}  className="agentcontent-img">
+                    backgroundImage: "url(" + Content.background + ")",
+                    backgroundPosition: 'center',
+                    backgroundSize: 'cover',
+                    backgroundRepeat: 'no-repeat'
+                }} className="agentcontent-img">
                     <img className="center" src={Content.fullPortrait} alt={Content.displayName} />
                 </div>
                 <div className="agentcontent-content">
@@ -28,7 +28,28 @@ export default function AgentContent() {
                     <div><h3>{Content.role?.displayName}</h3></div>
                     <div><p>{Content.role?.description}</p></div>
                 </div>
-
+            </div>
+            <div>
+                <h1>Skills</h1>
+            </div>
+            <div className="center">
+                <div className="Skills-cards">
+                {
+                    Content.abilities?.map((item, index) => {
+                        return (
+                            <div key={index} className="Skills-card">
+                                <div className="center bg-cardss">
+                                    <img src={item.displayIcon} alt={item.displayName} />
+                                </div>
+                                <div style={{ marginLeft:"2rem" }} > 
+                                    <div><h3>{item.displayName}</h3></div>
+                                    <div><p>{item.description}</p></div>
+                                </div>
+                            </div>
+                        )
+                    })
+                }
+                </div>
             </div>
         </div>
     )

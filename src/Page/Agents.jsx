@@ -26,15 +26,12 @@ export default function Agents() {
                 {
                     Content.map(( item, index ) => {
                         return(
-                            <div style={{
+                            <div key={index} style={{
                                 backgroundImage: "url(" + item.background + ")",
                                 backgroundPosition: 'center',
                                 backgroundSize: 'cover',
                                 backgroundRepeat: 'no-repeat'
-                            }}  onClick={event => AgentsPage(item.uuid)} key={index} className="agent-card-witdh">
-                               <div>
-                                    <h1>{item.displayName}</h1>
-                                </div>
+                            }}  onClick={event => AgentsPage(item.uuid)} className="agent-card-witdh">
                                 <div>
                                     <img src={item.fullPortrait} alt={item.displayName} />
                                 </div>

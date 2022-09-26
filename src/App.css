@@ -201,3 +201,32 @@
    width: 500px;
    text-align: center;
 }
+
+.abilt-card{
+    padding: 2rem;
+    background-color: #3a2665;
+}
+
+.Skills-card{
+    border: solid #9061F9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.Skills-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+}
+.bg-cardss {
+    background-color: #9061F9;
+}
+.bg-cardss img {
+    padding: 1rem;
+    width: 120px;
+    height: auto;
+}
