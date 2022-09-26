@@ -171,11 +171,33 @@
     margin: 1rem;
     width: 250px;
     height: 350px;
-    background-color: #9061F9;
+    background-color: #372f48;
     border-radius: 12px;
 }
 
 .agent-card-witdh img {
     width: 280px;
     height: auto;
+}
+
+.agentcontent-cards-bodys {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.agentcontent-img img {
+    width: 500px;
+}
+
+.agentcontent-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.agentcontent-content p {
+   width: 500px;
+   text-align: center;
 }
