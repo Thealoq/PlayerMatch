@@ -15,15 +15,15 @@ export default function Navbar() {
         },
         {
             name: "Maps",
-            path: "/maps",
+            path: "/Maps",
         },
         {
             name: "Mods",
-            path: "/mods",
+            path: "/Mods",
         },
         {
             name: "Ranks",
-            path: "/ranks",
+            path: "/Ranks",
         },
     ]
     const [Content, SetContent] = useState(false);

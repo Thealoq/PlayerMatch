@@ -11,6 +11,7 @@ export default function AgentContent() {
                 SetArray(json.data)
             });
     }, []);
+  
     return (
         <div className="center">
             <div className="agentcontent-cards-bodys">
@@ -36,6 +37,19 @@ export default function AgentContent() {
                 <div className="Skills-cards">
                 {
                     Content.abilities?.map((item, index) => {
+                        if(!item.displayIcon) {
+                            return(
+                                <div key={index} className="Skills-card">
+                                <div className="center bg-cardss">
+                                    <img style={{ padding:"0rem", width:"155px", height:"161px" }} src="https://cdn.discordapp.com/attachments/902302627767918602/1023996010629963890/pngegg_2.png" alt={item.displayName} />
+                                </div>
+                                <div className="center gs" > 
+                                    <div><h3>{item.displayName}</h3></div>
+                                    <div><p>{item.description}</p></div>
+                                </div>
+                            </div>
+                            )
+                        }
                         return (
                             <div key={index} className="Skills-card">
                                 <div className="center bg-cardss">

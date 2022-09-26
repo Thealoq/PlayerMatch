@@ -221,7 +221,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 80%;
+    width: 1000px;
 }
 .bg-cardss {
     background-color: #9061F9;
@@ -230,6 +230,10 @@
     padding: 1rem;
     width: 120px;
     height: auto;
+}
+
+.Skills-card p{
+  font-size: 13px;
 }
 
 .gs {
@@ -246,7 +250,7 @@
 
    .agentcontent-img img {
     width: 400px;
-    margin-top: 6rem;
+    margin-top: 10rem;
     }
     .agentcontent-content p {
         width: 380px;
@@ -256,8 +260,13 @@
     .Skills-card{
         flex-direction: column;
     }
-    .bg-cardss img {
+
+    .bg-cardss {
         width: 100%;
+    }
+
+    .bg-cardss img {
+        width: 50%;
         height: auto;
     }
     
@@ -265,6 +274,45 @@
         margin-left: 0rem;
         width: 80%;
     }
+
+    .Skills-cards {
+        width: 80%;
+    }
     
+}
+
+.map-body {
+    background-color: #9061F9;
+    height: 175px;
+    margin: 1rem;
+    border-radius: 12px;
+}
+
+.allmaps-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.map-bg {
+    padding: 1rem;
+    width: 500px;
+    height: 120px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+.Content-splash{
+    width: 700px;
+    height: 200px;
+    border-radius: 12px;
+}
+
+
+.Content-icon{
+    margin-top: 4rem;
+    width: 300px;
+    height: 300px;
+    border-radius: 12px;
 }
 
