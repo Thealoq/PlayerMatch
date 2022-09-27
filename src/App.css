@@ -305,8 +305,27 @@
 
 .map-bodytrans {
     background: linear-gradient(to bottom, transparent, #3a2665);
-    width: 500px;
+    width: 100%;
     height: 200px;
     border-radius: 12px;
 }
 
+.Content-splash {
+    width:  600px;
+    height: 150px;
+    border-radius: 12px;
+}
+
+.Content-icon{
+    margin-top: 4rem;
+    width: 400px;
+    height: 400px;
+
+}
+
+@media only screen and (max-width: 750px) {
+    .map-bg {
+        width: 350px;
+    }
+     
+ }
