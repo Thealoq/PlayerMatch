@@ -298,15 +298,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 500px;
-    height: 200px;
+    width: 600px;
+    height: 150px;
     border-radius: 12px;
 }
 
 .map-bodytrans {
     background: linear-gradient(to bottom, transparent, #3a2665);
     width: 100%;
-    height: 200px;
+    height: 100%;
     border-radius: 12px;
 }
 
@@ -339,3 +339,26 @@
     }
 
  
+    .allmods-body{
+        margin: 1rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+    }
+
+    .map-body{
+        border: #9061F9 solid;
+        border-radius: 12px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .withmods{
+        width: 500px;
+    }
+
+   
