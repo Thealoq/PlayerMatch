@@ -341,7 +341,7 @@
  
     .allmods-body{
         margin: 1rem;
-        width: 100%;
+        width: 98%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -361,4 +361,18 @@
         width: 500px;
     }
 
-   
+    .allranks-body{
+        margin: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .ranks-body {
+        border: #9061F9 solid;
+        border-radius: 12px;
+        margin: 1rem;
+        width: 200px;
+        height: 200px;
+    }

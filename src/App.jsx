@@ -4,7 +4,7 @@ import AgentContent from "./Page/AgentContent"
 import NotFound from "./Page/NotFound"
 import Maps from "./Page/Maps"
 import Mods from "./Page/Mods"
-import ModsContent from "./Page/ModsContent"
+import Ranks from "./Page/Ranks"
 import MapsContent from "./Page/MapsContent"
 import Navbar from "./layout/Navbar"
 import Footer from "./layout/Footer"
@@ -27,7 +27,7 @@ export default function App() {
           <Route path="/Maps" element={<Maps />} />
           <Route path="/Maps/:name" element={<MapsContent />} />
           <Route path="/Mods" element={<Mods />} />
-          <Route path="/Mods/:name" element={<ModsContent />} />
+          <Route path="/Ranks" element={<Ranks />} />
         </Routes>
         <Footer />
       </div>
