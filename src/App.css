@@ -331,7 +331,11 @@
     .Content-splash{
         width: 350px;
     }
-     
+    .Content-icon{
+        width: 250;
+        height: 250;
+    }
+    
     }
 
  
