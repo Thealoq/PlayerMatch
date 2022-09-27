@@ -17,23 +17,25 @@ export default function Maps() {
     }
 
     return (
-            <div className="allmaps-body center">
-                {
-                    Maps.map((item, index) => {
-                        return (
-                            <div key={index} className="map-body">
-                                <div onClick={event => MapPage(item.uuid)} className="map-bg center" style={{
-                                    backgroundImage: "url(" + item.listViewIcon + ")",
-                                    backgroundPosition: 'center',
-                                    backgroundSize: 'cover',
-                                    backgroundRepeat: 'no-repeat'
-                                }}>
-                                    <h2>{item.displayName}</h2>
+        <div className="allmaps-body">
+            {
+                Maps.map((item, index) => {
+                    return (
+                        <div key={index} className="map-body">
+                            <div onClick={event => MapPage(item.uuid)} className="map-bg" style={{
+                                backgroundImage: "url(" + item.listViewIcon + ")",
+                                backgroundPosition: 'center',
+                                backgroundSize: 'cover',
+                                backgroundRepeat: 'no-repeat'
+                            }}>
+                                <div className="map-bodytrans center">
+                                    <h3>{item.displayName}</h3>
                                 </div>
                             </div>
-                        )
-                    })
-                }
-            </div>
+                        </div>
+                    )
+                })
+            }
+        </div>
     )
 }
