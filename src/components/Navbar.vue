@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
    <a href="/">
-    <h1>Valorant Wiki</h1></a>
+    <h1>old Valorant Wiki new user wiki</h1></a>
   </div>
 </template>
 
