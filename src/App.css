@@ -134,6 +134,11 @@
     width: 90%;
 }
 
+ .map-bg img{
+    max-width: 150px;
+    max-height: 150px;
+  }
+
 .hop {
     width: 250px;
     height: 500px;
