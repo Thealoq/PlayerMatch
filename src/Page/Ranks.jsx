@@ -4,7 +4,7 @@ export default function Ranks() {
     const navigateTo = useNavigate()
     const [Ranks, SetRanks] = useState([]);
     useEffect(() => {
-        fetch("https://valorant-api.com/v1/competitivetiers/564d8e28-c226-3180-6285-e48a390db8b1")
+        fetch("https://valorant-api.com/v1/competitivetiers/564d8e28-c226-3180-6285-e48a390db8b1"+ "?language=tr-TR")
             .then(response => response.json())
             .then(json => {
                 SetRanks(json.data.tiers)

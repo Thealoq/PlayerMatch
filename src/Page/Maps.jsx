@@ -4,7 +4,7 @@ export default function Maps() {
     const navigateTo = useNavigate()
     const [Maps, SetMaps] = useState([]);
     useEffect(() => {
-        fetch("https://valorant-api.com/v1/maps")
+        fetch("https://valorant-api.com/v1/maps"+ "?language=tr-TR")
             .then(response => response.json())
             .then(json => {
                 SetMaps(json.data.filter(item => item.displayIcon))

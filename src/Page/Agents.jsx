@@ -4,7 +4,7 @@ export default function Agents() {
     const navigateTo = useNavigate()
       const [Content, SetArray] = useState([]);
       function Fetch() {
-        fetch("https://valorant-api.com/v1/agents")
+        fetch("https://valorant-api.com/v1/agents"+ "?language=tr-TR")
             .then(response => response.json())
             .then(json => {
                 SetArray(json.data.filter(item => item.background))

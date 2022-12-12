@@ -5,7 +5,7 @@ export default function AgentContent() {
     const { name } = useParams()
     const [Content, SetArray] = useState([]);
     useEffect(() => {
-        fetch("https://valorant-api.com/v1/agents/" + name)
+        fetch("https://valorant-api.com/v1/agents/" + name + "?language=tr-TR")
             .then(response => response.json())
             .then(json => {
                 SetArray(json.data)

@@ -4,7 +4,7 @@ export default function Mods() {
     const navigateTo = useNavigate()
     const [Mods, SetMods] = useState([]);
     useEffect(() => {
-        fetch("https://valorant-api.com/v1/gamemodes")
+        fetch("https://valorant-api.com/v1/gamemodes"+ "?language=tr-TR")
             .then(response => response.json())
             .then(json => {
                 SetMods(json.data)

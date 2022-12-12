@@ -35,19 +35,19 @@ export default function Home() {
         }
     ]
     function Fetch() {
-        fetch("https://valorant-api.com/v1/agents")
+        fetch("https://valorant-api.com/v1/agents"+ "?language=tr-TR")
             .then(response => response.json())
             .then(json => {
                 SetArray(json.data.filter(item => item.background))
             });
 
-        fetch("https://valorant-api.com/v1/gamemodes")
+        fetch("https://valorant-api.com/v1/gamemodes"+ "?language=tr-TR")
             .then(response => response.json())
             .then(json => {
                 SetGameMode(json.data.filter(item => item.displayIcon))
             });
 
-        fetch("https://valorant-api.com/v1/maps")
+        fetch("https://valorant-api.com/v1/maps"+ "?language=tr-TR")
             .then(response => response.json())
             .then(json => {
                 SetMaps(json.data.filter(item => item.displayIcon))

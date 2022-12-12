@@ -6,7 +6,7 @@ export default function MapsContent() {
 
     const [Content, SetContent] = useState([]);
     useEffect(() => {
-        fetch("https://valorant-api.com/v1/maps/" + name)
+        fetch("https://valorant-api.com/v1/maps/" + name+ "?language=tr-TR")
             .then(response => response.json())
             .then(json => {
                 SetContent(json.data)
