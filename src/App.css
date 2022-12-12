@@ -102,6 +102,13 @@
     align-items: center;
 }
 
+
+.home-gamemode img{
+  max-width: 150px;
+  height: 150px;
+}
+
+
 .home-gamemode{
     border: solid white;
     border-radius: 12px;
