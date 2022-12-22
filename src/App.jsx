@@ -1,37 +1,25 @@
-import Home from "./Page/Home"
-import Agents from "./Page/Agents"
-import AgentContent from "./Page/AgentContent"
-import NotFound from "./Page/NotFound"
-import Maps from "./Page/Maps"
-import Mods from "./Page/Mods"
-import Ranks from "./Page/Ranks"
-import MapsContent from "./Page/MapsContent"
-import Navbar from "./layout/Navbar"
-import Footer from "./layout/Footer"
+import './index.css'
+import Agents from './views/Agents';
+import Navbar from './Layout/Navbar';
 import {
   BrowserRouter as Router,
   Route,
   Routes,
 } from "react-router-dom";
+import Home from './views/Home';
 export default function App() {
-
   return (
-    <Router>
+    <div className="flex">
+     <Router>
       <Navbar />
-      <div className="App">
+      <div className="w-full">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="*" element={<NotFound />} />
-          <Route path="/Agents/:name" element={<AgentContent />} />
+          <Route path='/' element={<Home />}></Route>
           <Route path="/Agents" element={<Agents />} />
-          <Route path="/Maps" element={<Maps />} />
-          <Route path="/Maps/:name" element={<MapsContent />} />
-          <Route path="/Mods" element={<Mods />} />
-          <Route path="/Ranks" element={<Ranks />} />
         </Routes>
-        <Footer />
       </div>
     </Router>
+    </div>
   )
 }
 
