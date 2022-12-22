@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Home from './views/Home';
 import Responsive from './Layout/Responsive';
+import Agents from './views/Agents';
 export default function App() {
   return (
     <div className="md:flex">
@@ -17,6 +18,7 @@ export default function App() {
       <div className="w-full">
         <Routes>
           <Route path='/' element={<Home />}></Route>
+          <Route path="/Agents" element={<Agents />} />
           <Route path="/Agents/:uuid" element={<AgentsContent />} />
         </Routes>
       </div>

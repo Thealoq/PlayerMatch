@@ -15,6 +15,8 @@ export default function Agents() {
     function ClickEvent(e) {
         Setvalue(e)
     }
+
+
     return (
         <div className="h-[100vh]">
             <div className="relative -z-0">
@@ -84,7 +86,7 @@ export default function Agents() {
 
                 <div className="md:ml-6 ml-0">
                     <div className="w-[300px] md:w-full overflow-auto no-scrollbar whitespace-nowrap lg:whitespace-normal lg:flex-wrap " aria-label="Tabs">
-                        <a className="hidden relative md:inline-flex shrink-0 items-center cursor-pointer">
+                        <a onClick={e => ClickEvent("all")} className="hidden relative md:inline-flex shrink-0 items-center cursor-pointer">
                             <div className="relative flex items-center justify-center shrink-0 px-4 py-4 text-sm font-bold uppercase tracking-wide text-gray-100">
                                 <span>Skills</span>
                                 <div className="absolute inset-x-0 bottom-0 h-1 rounded-[1px] bg-primary-400"></div>
@@ -125,6 +127,15 @@ export default function Agents() {
                                         </div>
                                         )
                                     }
+                                }
+                                if(Value == "all" ) {
+                                    return(
+                                        <div key={i}>
+                                        <div>
+                                            {t?.displayName}
+                                        </div>
+                                    </div>
+                                    )
                                 }
                                
                             })
