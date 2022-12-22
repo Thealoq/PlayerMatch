@@ -1,5 +1,5 @@
 import './index.css'
-import Agents from './views/Agents';
+import AgentsContent from './views/AgentsContent';
 import Navbar from './Layout/Navbar';
 import {
   BrowserRouter as Router,
@@ -7,15 +7,17 @@ import {
   Routes,
 } from "react-router-dom";
 import Home from './views/Home';
+import Responsive from './Layout/Responsive';
 export default function App() {
   return (
-    <div className="flex">
+    <div className="md:flex">
      <Router>
+      <Responsive />
       <Navbar />
       <div className="w-full">
         <Routes>
           <Route path='/' element={<Home />}></Route>
-          <Route path="/Agents" element={<Agents />} />
+          <Route path="/Agents/:uuid" element={<AgentsContent />} />
         </Routes>
       </div>
     </Router>
