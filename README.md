@@ -1,4 +1,5 @@
 # valorantwiki
 eski ve ilk projemi yeni hali geldi
 
-https://nilahgod.is-a-cool-femboy.xyz/5QB4CC5T0.png
+![image](https://user-images.githubusercontent.com/79800238/209046242-fb2ab5b9-1115-441b-8feb-80973d43b929.png)
+
