@@ -10,11 +10,13 @@ export default function Agents() {
             .then(json => {
                 SetContent(json.data)
             });
-      
+            console.log("👋");
     }, []);
     function ClickEvent(e) {
         Setvalue(e)
     }
+
+
 
 
     return (

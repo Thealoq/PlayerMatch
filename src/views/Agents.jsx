@@ -14,7 +14,6 @@ export default function Agents() {
         Fetch()
     }, []);
     function AgentsPage(e) {
-        //👋
         const link = "/Agents" + "/" + e
         navigateTo(link, { replace: true })
     }
