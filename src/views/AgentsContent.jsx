@@ -10,14 +10,7 @@ export default function Agents() {
             .then(json => {
                 SetContent(json.data)
             });
-            console.log("👋");
     }, []);
-    function ClickEvent(e) {
-        Setvalue(e)
-    }
-
-
-
 
     return (
         <div className="h-[100vh]">
@@ -66,7 +59,7 @@ export default function Agents() {
                                 </div>
                                 <div className="flex-col justify-center items-center text-center">
                                     {
-                                        Content?.characterTags?.characterTags?.map((t ,i)=> {
+                                        Content?.characterTags?.characterTags?.map((t, i) => {
                                             return (
                                                 <div key={i} className="flex justify-center items-center text-center m-2">
                                                     <p>{t}</p>
@@ -86,18 +79,18 @@ export default function Agents() {
 
 
 
-                <div className="md:ml-6 ml-0">
-                    <div className="w-[300px] md:w-full overflow-auto no-scrollbar whitespace-nowrap lg:whitespace-normal lg:flex-wrap " aria-label="Tabs">
-                        <a onClick={e => ClickEvent("all")} className="hidden relative md:inline-flex shrink-0 items-center cursor-pointer">
+                <div className="md:ml-6 ml-0 m-2">
+                    <div className="w-[300px] md:w-full overflow-auto no-scrollbar whitespace-nowrap lg:whitespace-normal lg:flex-wrap itmes-center flex " aria-label="Tabs">
+                        <a onClick={e => Setvalue("all")} className="relative inline-flex shrink-0 cursor-pointer justify-center items-center">
                             <div className="relative flex items-center justify-center shrink-0 px-4 py-4 text-sm font-bold uppercase tracking-wide text-gray-100">
                                 <span>Skills</span>
                                 <div className="absolute inset-x-0 bottom-0 h-1 rounded-[1px] bg-primary-400"></div>
                             </div>
                         </a>
                         {
-                            Content.abilities?.map((t,i) => {
+                            Content.abilities?.map((t, i) => {
                                 return (
-                                    <a key={i} onClick={e => ClickEvent(t.slot)} className="relative inline-flex shrink-0 items-center cursor-pointer">
+                                    <a key={i} onClick={e => Setvalue(t.slot)} className="relative inline-flex shrink-0 items-center cursor-pointer">
                                         <div className="relative flex items-center justify-center shrink-0 px-4 py-4 text-sm font-bold uppercase tracking-wide text-gray-300 transition-colors ease-linear hover:bg-white/10 rounded">
                                             <img className="w-5 h-5 mr-2" src={t.displayIcon} />
                                             <span>{t.displayName}</span>
@@ -107,44 +100,63 @@ export default function Agents() {
                             })
                         }
                     </div>
-                    <div className="bg-[#1c1a1f] md:w-[800px] w-[290px] rounded md:h-[300px] h-[200px] mt-2 ml-1 flex justify-center items-center flex-col">
-                        {
-                            Content.abilities?.map((t, i) => {
-                                if(!Value.length) {
-                                    return (
-                                        <div key={i}>
+                    <div className="bg-[#1c1a1f] md:w-[800px] w-[290px] rounded md:h-[300px] h-[500px] mt-2 ml-1 flex justify-center items-center md:flex-row flex-col">
+                        <div className="flex justify-center items-center md:flex-row flex-col">
+                            {
+                                Content.abilities?.map((t, i) => {
+                                    if (!Value.length || Value == "all") {
+                                        if (Content.abilities?.length > 4) return (
                                             <div>
-                                                {t?.displayName}
+                                                <div key={i} className="bg-[#1412158f] m-2 md:w-[130px] w-[240px] md:h-[200px] h-[80px] flex justify-center items-center flex-col rounded-lg p-2">
+                                                    <div >
+                                                        <img width={60} height={60} src={t?.displayIcon} />
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                    )
-                                } 
-                                if(Value.length) {
-                                    if(t.slot == Value) {
-                                        return(
-                                            <div key={i}>
-                                            <div>
-                                                {t?.displayName}
-                                            </div>
-                                        </div>
                                         )
+                                        return (
+                                            <div>
+                                                <div key={i} className="bg-[#1412158f] m-2 md:w-[170px] w-[240px] md:h-[200px] h-[100px] flex justify-center items-center flex-col rounded-lg p-2">
+                                                        <div>
+                                                        <img width={80} height={80} src={t?.displayIcon} />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        )
+
+
                                     }
-                                }
-                                if(Value == "all" ) {
-                                    return(
-                                        <div key={i}>
-                                        <div>
-                                            {t?.displayName}
-                                        </div>
-                                    </div>
-                                    )
-                                }
-                               
-                            })
-                        }
+                                    if (Value.length) {
+                                        if (t.slot == Value) {
+                                            return (
+                                                <div>
+                                                    <div className="justify-center items-center md:flex flex-col">
+                                                        <div key={i} className="bg-[#1412158f] m-2 md:w-[170px] h-[220px] flex justify-center items-center flex-col rounded-lg p-2">
+                                                            <div>
+                                                                <img width={100} height={100} src={t?.displayIcon} />
+                                                            </div>
+                                                        </div>
+                                                        <div key={i} className="bg-[#1412158f] m-2 md:w-[520px] h-[220px] flex justify-center items-center flex-col rounded-lg p-8">
+                                                            <div className="text-lg text-bold m-2">
+                                                                {t?.displayName}
+                                                            </div>
+                                                            <div className="md:text-sm text-[12px] flex justify-center items-center">
+                                                                <div className="flex justify-center items-center text-center">
+                                                                    <p>{t?.description}</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            )
+                                        }
+                                    }
+                                })
+                            }
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     )
-}
+} 
