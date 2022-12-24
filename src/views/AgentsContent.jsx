@@ -127,9 +127,8 @@ export default function Agents() {
                                         )
                                         return (
                                             <div>
-                                                <div key={i} className="bg-[#1412158f] m-2 md:w-[170px] w-[240px] md:h-[200px] h-[100px] flex justify-center items-center md:flex-row flex-col rounded-lg p-2">
+                                                <div key={i} className="bg-[#1412158f] m-2 md:w-[170px] w-[230px] md:h-[200px] h-[100px] flex justify-center items-center md:flex-row flex-col rounded-lg p-2">
                                                         <div>
-                                                            
                                                         <img width={80} height={80} src={t?.displayIcon ? t?.displayIcon:"https://cdn.discordapp.com/attachments/1041820134374903818/1056033358230065194/My_project.png"} />
                                                     </div>
                                                 </div>
@@ -141,7 +140,7 @@ export default function Agents() {
                                             return (
                                                 <div>
                                                     <div className="flex justify-center items-center md:flex-row flex-col ">
-                                                        <div key={i} className="bg-[#1412158f] m-2 md:w-[170px] h-[220px] flex justify-center items-center flex-col rounded-lg p-2">
+                                                        <div key={i} className="bg-[#1412158f] m-2 md:w-[170px]  w-[270px] h-[220px] flex justify-center items-center flex-col rounded-lg p-2">
                                                             <div>
                                                                 <img width={100} height={100} src={t?.displayIcon?t?.displayIcon:"https://cdn.discordapp.com/attachments/1041820134374903818/1056033358230065194/My_project.png"} />
                                                             </div>

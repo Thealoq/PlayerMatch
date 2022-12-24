@@ -6,7 +6,6 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
-console.log("hello");
 import Home from './views/Home';
 import Responsive from './Layout/Responsive';
 import Agents from './views/Agents';
