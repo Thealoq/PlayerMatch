@@ -11,7 +11,7 @@ import Responsive from './Layout/Responsive';
 import Agents from './views/Agents';
 export default function App() {
   return (
-    <div className="md:flex">
+    <div>
      <Router>
       <Responsive />
       <Navbar />

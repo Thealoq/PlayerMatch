@@ -18,12 +18,11 @@ export default function Agents() {
         navigateTo(link, { replace: true })
     }
 
+
+
     return (
         <div>
-            <div className="p-20">
-                <div className="flex justify-center items-center text-left text-2xl text-bold m-2 ">
-                    <span>POPULAR AGENTS</span>
-                </div>
+            <div className="mt-10">
                 <div className="flex flex-wrap w-full justify-center items-center">
                     {
                         Content?.map((t, i) => {

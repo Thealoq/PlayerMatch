@@ -12,6 +12,17 @@ export default function Agents() {
             });
     }, []);
 
+
+    if(!Content) {
+        return(
+            <div className="flex justify-center items-center h-[100vh]">
+                <div className="flex justify-center items-center w-[600px] h-[300px] bg-[#1c1a1f]  rounded-lg">
+                    <span className="text-4xl">👎 Not Found Agent 🕵️‍♀️</span>
+                </div>
+            </div>
+        )
+    } 
+
     return (
         <div className="h-[100vh]">
             <div className="relative -z-0">
@@ -92,7 +103,7 @@ export default function Agents() {
                                 return (
                                     <a key={i} onClick={e => Setvalue(t.slot)} className="relative inline-flex shrink-0 items-center cursor-pointer">
                                         <div className="relative flex items-center justify-center shrink-0 px-4 py-4 text-sm font-bold uppercase tracking-wide text-gray-300 transition-colors ease-linear hover:bg-white/10 rounded">
-                                            <img className="w-5 h-5 mr-2" src={t.displayIcon} />
+                                            <img className="w-5 h-5 mr-2" src={t.displayIcon ? t?.displayIcon:"https://cdn.discordapp.com/attachments/1041820134374903818/1056033358230065194/My_project.png"} />
                                             <span>{t.displayName}</span>
                                         </div>
                                     </a>
@@ -107,33 +118,32 @@ export default function Agents() {
                                     if (!Value.length || Value == "all") {
                                         if (Content.abilities?.length > 4) return (
                                             <div>
-                                                <div key={i} className="bg-[#1412158f] m-2 md:w-[130px] w-[240px] md:h-[200px] h-[80px] flex justify-center items-center flex-col rounded-lg p-2">
-                                                    <div >
-                                                        <img width={60} height={60} src={t?.displayIcon} />
+                                                <div key={i} className="bg-[#1412158f] m-2 md:w-[130px] w-[240px] md:h-[200px] h-[80px] flex justify-center items-center md:flex-row flex-col rounded-lg p-2">
+                                                    <div>
+                                                        <img width={60} height={60} src={t?.displayIcon? t?.displayIcon:"https://cdn.discordapp.com/attachments/1041820134374903818/1056033358230065194/My_project.png"} />
                                                     </div>
                                                 </div>
                                             </div>
                                         )
                                         return (
                                             <div>
-                                                <div key={i} className="bg-[#1412158f] m-2 md:w-[170px] w-[240px] md:h-[200px] h-[100px] flex justify-center items-center flex-col rounded-lg p-2">
+                                                <div key={i} className="bg-[#1412158f] m-2 md:w-[170px] w-[240px] md:h-[200px] h-[100px] flex justify-center items-center md:flex-row flex-col rounded-lg p-2">
                                                         <div>
-                                                        <img width={80} height={80} src={t?.displayIcon} />
+                                                            
+                                                        <img width={80} height={80} src={t?.displayIcon ? t?.displayIcon:"https://cdn.discordapp.com/attachments/1041820134374903818/1056033358230065194/My_project.png"} />
                                                     </div>
                                                 </div>
                                             </div>
                                         )
-
-
                                     }
                                     if (Value.length) {
                                         if (t.slot == Value) {
                                             return (
                                                 <div>
-                                                    <div className="justify-center items-center md:flex flex-col">
+                                                    <div className="flex justify-center items-center md:flex-row flex-col ">
                                                         <div key={i} className="bg-[#1412158f] m-2 md:w-[170px] h-[220px] flex justify-center items-center flex-col rounded-lg p-2">
                                                             <div>
-                                                                <img width={100} height={100} src={t?.displayIcon} />
+                                                                <img width={100} height={100} src={t?.displayIcon?t?.displayIcon:"https://cdn.discordapp.com/attachments/1041820134374903818/1056033358230065194/My_project.png"} />
                                                             </div>
                                                         </div>
                                                         <div key={i} className="bg-[#1412158f] m-2 md:w-[520px] h-[220px] flex justify-center items-center flex-col rounded-lg p-8">
