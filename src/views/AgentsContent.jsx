@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from 'react-router-dom';
+import img from "../Assets/soru.png"
 export default function Agents() {
     const { uuid } = useParams()
     const [Content, SetContent] = useState([]);
@@ -103,7 +104,7 @@ export default function Agents() {
                                 return (
                                     <a key={i} onClick={e => Setvalue(t.slot)} className="relative inline-flex shrink-0 items-center cursor-pointer">
                                         <div className="relative flex items-center justify-center shrink-0 px-4 py-4 text-sm font-bold uppercase tracking-wide text-gray-300 transition-colors ease-linear hover:bg-white/10 rounded">
-                                            <img className="w-5 h-5 mr-2" src={t.displayIcon ? t?.displayIcon:"https://cdn.discordapp.com/attachments/1041820134374903818/1056033358230065194/My_project.png"} />
+                                            <img className="w-5 h-5 mr-2" src={t.displayIcon ? t?.displayIcon:img} />
                                             <span>{t.displayName}</span>
                                         </div>
                                     </a>
@@ -120,7 +121,7 @@ export default function Agents() {
                                             <div>
                                                 <div key={i} className="bg-[#1412158f] m-2 md:w-[130px] w-[240px] md:h-[200px] h-[80px] flex justify-center items-center md:flex-row flex-col rounded-lg p-2">
                                                     <div>
-                                                        <img width={60} height={60} src={t?.displayIcon? t?.displayIcon:"https://cdn.discordapp.com/attachments/1041820134374903818/1056033358230065194/My_project.png"} />
+                                                        <img width={60} height={60} src={t?.displayIcon? t?.displayIcon:img} />
                                                     </div>
                                                 </div>
                                             </div>
@@ -129,7 +130,7 @@ export default function Agents() {
                                             <div>
                                                 <div key={i} className="bg-[#1412158f] m-2 md:w-[170px] w-[230px] md:h-[200px] h-[100px] flex justify-center items-center md:flex-row flex-col rounded-lg p-2">
                                                         <div>
-                                                        <img width={80} height={80} src={t?.displayIcon ? t?.displayIcon:"https://cdn.discordapp.com/attachments/1041820134374903818/1056033358230065194/My_project.png"} />
+                                                        <img width={80} height={80} src={t?.displayIcon ? t?.displayIcon:img} />
                                                     </div>
                                                 </div>
                                             </div>
@@ -142,7 +143,7 @@ export default function Agents() {
                                                     <div className="flex justify-center items-center md:flex-row flex-col ">
                                                         <div key={i} className="bg-[#1412158f] m-2 md:w-[170px]  w-[270px] h-[220px] flex justify-center items-center flex-col rounded-lg p-2">
                                                             <div>
-                                                                <img width={100} height={100} src={t?.displayIcon?t?.displayIcon:"https://cdn.discordapp.com/attachments/1041820134374903818/1056033358230065194/My_project.png"} />
+                                                                <img width={100} height={100} src={t?.displayIcon?t?.displayIcon:img} />
                                                             </div>
                                                         </div>
                                                         <div key={i} className="bg-[#1412158f] m-2 md:w-[520px] h-[220px] flex justify-center items-center flex-col rounded-lg p-8">

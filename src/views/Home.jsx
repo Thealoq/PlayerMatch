@@ -22,7 +22,7 @@ export default function Home() {
         )
     return (
         <div>
-            <div className="relative w-full px-4 py-16 lg:py-32 bg-primary-400 text-center bg-[#D000FB] text-black selection:text-primary-400" style={{
+            <div className="relative w-full px-4 py-16 lg:py-32 bg-primary-400 text-center text-black selection:text-primary-400" style={{
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
                 backgroundImage: `url(${jett})`,
@@ -43,7 +43,7 @@ export default function Home() {
                                             <img className="w-[280px] h-[300px] object-cover transition duration-200 hover:scale-105" src={x.src} />
                                         </div>
                                         <h2 className="mt-3 text-sm font-bold truncate hover:underline">{x.name}</h2>
-                                        {x.coming ? <p class="mt-0.5 text-xs font-medium text-gray-300">Coming soon</p> : " "}
+                                        {x.coming ? <p className="mt-0.5 text-xs font-medium text-gray-300">Coming soon</p> : " "}
                                     </a>
                                 </div>
                             )

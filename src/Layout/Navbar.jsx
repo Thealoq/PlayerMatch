@@ -1,34 +1,30 @@
-import { AiFillHome,AiOutlineLogin,AiOutlineUser } from "react-icons/ai"
-import { SiMagento } from "react-icons/si"
-import { BsFillMapFill } from "react-icons/bs"
-import { FaModx } from "react-icons/fa"
-import { GiSpy } from "react-icons/gi"
-
-
-
-export default function Navbar() {
+import { RxAvatar } from "react-icons/rx"
+import img from "../Assets/v.png"
+export default function Responsive() {
     return (
-        <div className=" relative hidden bg-[#1c1a1f] w-[100px] h-[100vh] flex-col justify-between items-center py-10">
-            <div>
-                <div className="flex justify-center items-center m-4 cursor-pointer">
-                    <a href="/Maps"><BsFillMapFill size={32} /></a>
+        <div className="flex h-[80px] justify-between items-center bg-[#1c1a1f] md:px-[6.5rem] px-2">
+            <div className="flex justify-center items-center">
+                <div className="flex justify-center items-center m-4">
+                   <a href="/"> <img width={60} height={60} src={img}/></a>
                 </div>
-                <div className="flex justify-center items-center m-4 cursor-pointer">
-                    <a href="/Agents"><GiSpy size={32} /></a>
+                <div className="flex justify-center items-center m-4">
+                    <a href="/Agents" className="text-bold text-lg hover:opacity-75">Agents</a>
                 </div>
-                <div className="flex justify-center items-center m-4 cursor-pointer">
-                    <a href="/Mods"><FaModx size={32} /></a>
+                <div className="flex justify-center items-center m-4">
+                    <a href="/Maps" className="text-bold text-lg hover:opacity-75">Maps</a>
+                </div>
+                <div className="flex justify-center items-center m-4">
+                    <a href="/Mods">Mods</a>
                 </div>
             </div>
-            <div className="flex justify-center items-center m-4">
-                <a href="/"><AiFillHome size={32} /></a>
-            </div>
-            <div>
-                <div className="flex justify-center items-center m-4 cursor-pointer">
-                    <a href="/Profile"><AiOutlineUser size={32} /></a>
-                </div>
-                <div className="flex justify-center items-center m-4 cursor-pointer">
-                   <a href="/Login"> <AiOutlineLogin size={32} /></a>
+            <div className="flex justify-center items-center">
+                <div className="flex justify-center items-center m-4">
+                    <a href="/Login" ><div className="flex justify-between items-center w-[75px]">
+                        <div>
+                            User
+                        </div>
+                        <div><RxAvatar size={32} /></div>
+                    </div></a>
                 </div>
             </div>
         </div>
