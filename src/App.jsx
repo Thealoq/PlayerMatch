@@ -6,7 +6,7 @@ import {
   Routes,
 } from "react-router-dom";
 import Home from './views/Home';
-import Navbar from './Layout/test';
+import Navbar from './Layout/Navbar';
 import Agents from './views/Agents';
 export default function App() {
   return (
