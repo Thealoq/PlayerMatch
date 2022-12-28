@@ -8,6 +8,7 @@ import {
 import Home from './views/Home';
 import Navbar from './Layout/Navbar';
 import Agents from './views/Agents';
+import Footer from './Layout/Footer';
 export default function App() {
   return (
     <div>
@@ -19,6 +20,7 @@ export default function App() {
           <Route path="/Valorant/Agents" element={<Agents />} />
           <Route path="/Valorant/Agents/:uuid" element={<AgentsContent />} />
         </Routes>
+        <Footer/>
       </div>
     </Router>
     </div>

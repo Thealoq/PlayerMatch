@@ -31,8 +31,8 @@ export default function Responsive() {
         DropTwos ? dropTree.current.style.display = "none" : dropTree.current.style.display = "flex"
     }
     return (
-        <div>
-            <div className="flex md:hidden bg-[#1C1A1F]">
+        <div className="bg-[#1C1A1F]">
+            <div className="flex md:hidden ">
                 <div className="flex items-center m-2 ">
                     <a href="/" className="text-[#e00b87] text-bold text-lg">ValorantWiki</a>
                 </div>
@@ -54,7 +54,7 @@ export default function Responsive() {
                 </div>
             </div>
 
-            <div className="hidden md:flex h-[80px] justify-between items-center px-8 bg-[#1C1A1F]">
+            <div className="hidden md:flex h-[80px] justify-between items-center px-8 ">
                 <div className="flex justify-center items-center">
                     <div className="flex items-center m-2 ">
                         <a href="/" className="text-[#e00b87] text-bold text-lg">ValorantWiki</a>

@@ -88,9 +88,9 @@ export default function Home() {
                     }
                 </div>
             </div>
-            <div className="mt-6 flex flex-col items-center">
-                 <h3 class="text-xl sm:text-2xl font-bold text-start font-display uppercase">Featured players</h3>
-                <div className="flex flex-wrap justify-center items-center  w-[80%]">
+            <div className="mt-6 flex flex-col items-center ">
+                 <h3 class="text-xl sm:text-2xl font-bold text-start font-display">Last Players</h3>
+                <div className="flex flex-wrap justify-center items-center  w-[80%] p-2">
                     {
                         users.map((x, i) => {
                             return (
@@ -125,6 +125,9 @@ export default function Home() {
                         })
                     }
                 </div>
+            </div>
+            <div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#1C1A1F" fill-opacity="1" d="M0,160L360,224L720,160L1080,256L1440,192L1440,320L1080,320L720,320L360,320L0,320Z"></path></svg>
             </div>
         </div>
     )
