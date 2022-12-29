@@ -75,7 +75,7 @@ export default function Responsive() {
                             </div>
                         </div>
                     </div>
-                    <div className="cursor-pointer select-none m-2" onClick={e => OpenTwo(e)}>
+                    <div className="hidden cursor-pointer select-none m-2" onClick={e => OpenTwo(e)}>
                         <div className="flex items-center">
                             Valorant {Drop ? <RiArrowDropDownLine size={32} /> : <RiArrowDropUpLine size={32} />}
                         </div>
@@ -90,6 +90,9 @@ export default function Responsive() {
                                 <a href="/Valorant/Mods">Mods</a>
                             </div>
                         </div>
+                    </div>
+                    <div className="flex justify-center items-center">
+                         <a href="/game/match">Match</a>
                     </div>
                 </div>
                 <div className="w-[105px] flex justify-between items-center">
