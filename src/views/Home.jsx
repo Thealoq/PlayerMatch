@@ -89,7 +89,7 @@ export default function Home() {
                 </div>
             </div>
             <div className="mt-6 flex flex-col items-center ">
-                 <h3 class="text-xl sm:text-2xl font-bold text-start font-display">Last Players</h3>
+                 <h3 className="text-xl sm:text-2xl font-bold text-start font-display">Last Players</h3>
                 <div className="flex flex-wrap justify-center items-center  w-[80%] p-2">
                     {
                         users.map((x, i) => {

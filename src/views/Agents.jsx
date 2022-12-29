@@ -9,6 +9,7 @@ export default function Agents() {
             .then(json => {
                 SetArray(json.data.filter(item => item.background))
             });
+
     }
     useEffect(() => {
         Fetch()
