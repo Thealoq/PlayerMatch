@@ -65,8 +65,8 @@ export default function Home() {
                 backgroundImage: `url(${banner})`,
                 backgroundSize: "cover",
             }}>
-                <h1 className="text-3xl md:text-4xl  font-bold uppercase text-white">see your<br />Game Stats</h1>
-                <h2 className="text-white mb-8 mt-4 font-medium lg:text-lg ">we collect and combine information for you in games</h2>
+                <h1 className="text-3xl md:text-4xl  font-bold uppercase text-white">Player <b className="text-[#ffffff]">Match</b></h1>
+                <h2 className="text-white mb-8 mt-4 font-medium lg:text-lg ">If you want to search for a new playmate, we help.</h2>
             </div>
             <div className="max-w-7xl mx-auto space-y-4  px-4 sm:px-6 lg:px-8 py-4">
                 <h3 className="text-xl sm:text-2xl font-bold uppercase m-2 md:text-start text-center">Games 🕹️</h3>
