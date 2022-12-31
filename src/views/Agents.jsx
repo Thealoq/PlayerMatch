@@ -14,13 +14,6 @@ export default function Agents() {
     useEffect(() => {
         Fetch()
     }, []);
-    function AgentsPage(e) {
-        const link = "/Valorant/Agents" + "/" + e
-        navigateTo(link, { replace: true })
-    }
-
-
-
     return (
         <div>
             <div className="mt-10">
@@ -32,7 +25,8 @@ export default function Agents() {
                                     backgroundPosition: "center 40%",
                                     backgroundRepeat: "no-repeat",
                                     backgroundImage: `url(https://media.valorant-api.com/agents/${t.uuid}/background.png)`,
-                                }} className="flex justify-center w-[320px] m-2 items-center flex-col rounded-md" onClick={e => AgentsPage(t.uuid)}>
+                                }} className="flex justify-center w-[320px] m-2 items-center flex-col rounded-md" 
+                                    onClick={e => navigateTo("/Valorant/Agents" + "/" + t.uuid, { replace: true })}>
                                     <div className="w-full h-[150px] object-cover rounded-t-md" style={{
                                         backgroundPosition: "center 20%",
                                         backgroundRepeat: "no-repeat",

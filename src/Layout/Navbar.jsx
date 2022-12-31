@@ -57,7 +57,7 @@ export default function Responsive() {
             <div className="hidden md:flex h-[80px] justify-between items-center px-8 ">
                 <div className="flex justify-center items-center">
                     <div className="flex items-center m-2 ">
-                        <a href="/" className="text-[#e00b87] text-bold text-lg">ValorantWiki</a>
+                        <a href="/" className="text-[#e00b87] text-bold text-lg">PlayerMatch</a>
                     </div>
                     <div className="cursor-pointer select-none m-2" onClick={e => Open(e)}>
                         <div className="flex items-center">
@@ -100,7 +100,7 @@ export default function Responsive() {
                         Login
                     </div>
                     <div className="flex justify-center items-center">
-                        <img className="rounded-full" width={50} height={50} src={av} />
+                        <img className="rounded-full border-2 border-[#e00b87]" width={50} height={50} src={av} />
                     </div>
                 </div>
             </div>
